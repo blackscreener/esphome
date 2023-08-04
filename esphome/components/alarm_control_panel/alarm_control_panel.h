@@ -112,6 +112,9 @@ class AlarmControlPanel : public EntityBase {
   // is the state one of the armed states
   bool is_state_armed(AlarmControlPanelState state);
 
+  // is the state disarmed
+  bool is_state_disarmed(AlarmControlPanelState state);
+
  protected:
   friend AlarmControlPanelCall;
   // in order to store last panel state in flash
