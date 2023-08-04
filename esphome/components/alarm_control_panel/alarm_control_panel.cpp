@@ -24,7 +24,15 @@ bool AlarmControlPanel::is_state_armed(AlarmControlPanelState state) {
     default:
       return false;
   }
-};
+}
+
+bool AlarmControlPanel::is_state_disarmed(AlarmControlPanelState state) {
+  if (state == ACP_STATE_DISARMED) {
+      return true;
+    } else {
+      return false;
+  }
+}
 
 void AlarmControlPanel::publish_state(AlarmControlPanelState state) {
   this->last_update_ = millis();
