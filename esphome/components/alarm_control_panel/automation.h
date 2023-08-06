@@ -111,5 +111,18 @@ template<typename... Ts> class AlarmControlPanelCondition : public Condition<Ts.
   AlarmControlPanel *parent_;
 };
 
+template<typename... Ts> class AlarmControlPanelCondition2 : public Condition<Ts...> {
+ public:
+  AlarmControlPanelCondition2(AlarmControlPanel *parent) : parent_(parent) {}
+  bool check(Ts... x) override {
+    return this->parent_->is_state_disarmed(this->parent_->get_state());
+  }
+
+ protected:
+  AlarmControlPanel *parent_;
+};
+
+
+
 }  // namespace alarm_control_panel
 }  // namespace esphome
