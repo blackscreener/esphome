@@ -38,6 +38,11 @@ AlarmControlPanelCondition = alarm_control_panel_ns.class_(
     "AlarmControlPanelCondition", automation.Condition
 )
 
+AlarmControlPanelCondition2 = alarm_control_panel_ns.class_(
+    "AlarmControlPanelCondition2", automation.Condition
+)
+
+
 ALARM_CONTROL_PANEL_SCHEMA = cv.ENTITY_BASE_SCHEMA.extend(
     {
         cv.GenerateID(): cv.declare_id(AlarmControlPanel),
