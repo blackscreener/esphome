@@ -148,7 +148,7 @@ async def alarm_action_trigger_to_code(config, action_id, template_arg, args):
 
 
 @automation.register_condition(
-    "alarm_control_panel.is_armed", "alarm_control_panel.is_disarmed",
+    "alarm_control_panel.is_armed",
     AlarmControlPanelCondition,
     ALARM_CONTROL_PANEL_CONDITION_SCHEMA,
 )
